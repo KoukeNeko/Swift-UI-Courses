@@ -37,29 +37,7 @@ struct ContentView: View {
             
             Spacer()
             
-            VStack {
-                Button {
-
-                } label: {
-                    Text("Sign Up")
-                }
-                .frame(width: 200)
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.indigo)
-                .cornerRadius(10)
-
-                Button {
-
-                } label: {
-                    Text("Log In")
-                }
-                .frame(width: 200)
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.gray)
-                .cornerRadius(10)
-            }
+            VSignUpButtonGroup()
             
         }
         .padding(.top, 38)
@@ -70,4 +48,32 @@ struct ContentView: View {
     ContentView()
                 .previewDevice(PreviewDevice(rawValue: "iPhone 15 Pro"))
                 .previewDisplayName("iPhone 15 Pro")
+}
+
+struct VSignUpButtonGroup: View {
+    var body: some View {
+        VStack {
+            Button {
+                
+            } label: {
+                Text("Sign Up")
+            }
+            .frame(width: 200)
+            .padding()
+            .foregroundColor(.white)
+            .background(Color.indigo)
+            .cornerRadius(10)
+            
+            Button {
+                
+            } label: {
+                Text("Log In")
+            }
+            .frame(width: 200)
+            .padding()
+            .foregroundColor(.white)
+            .background(Color.gray)
+            .cornerRadius(10)
+        }
+    }
 }
