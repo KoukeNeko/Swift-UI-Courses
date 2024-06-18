@@ -51,29 +51,60 @@ struct ContentView: View {
 }
 
 struct VSignUpButtonGroup: View {
+    
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    
+    
+    
     var body: some View {
-        VStack {
-            Button {
+        if verticalSizeClass == .compact {
+            HStack {
+                Button {
+                    
+                } label: {
+                    Text("Sign Up")
+                }
+                .frame(width: 200)
+                .padding()
+                .foregroundColor(.white)
+                .background(Color.indigo)
+                .cornerRadius(10)
                 
-            } label: {
-                Text("Sign Up")
+                Button {
+                    
+                } label: {
+                    Text("Log In")
+                }
+                .frame(width: 200)
+                .padding()
+                .foregroundColor(.white)
+                .background(Color.gray)
+                .cornerRadius(10)
             }
-            .frame(width: 200)
-            .padding()
-            .foregroundColor(.white)
-            .background(Color.indigo)
-            .cornerRadius(10)
-            
-            Button {
+        }else{
+            VStack {
+                Button {
+                    
+                } label: {
+                    Text("Sign Up")
+                }
+                .frame(width: 200)
+                .padding()
+                .foregroundColor(.white)
+                .background(Color.indigo)
+                .cornerRadius(10)
                 
-            } label: {
-                Text("Log In")
+                Button {
+                    
+                } label: {
+                    Text("Log In")
+                }
+                .frame(width: 200)
+                .padding()
+                .foregroundColor(.white)
+                .background(Color.gray)
+                .cornerRadius(10)
             }
-            .frame(width: 200)
-            .padding()
-            .foregroundColor(.white)
-            .background(Color.gray)
-            .cornerRadius(10)
         }
     }
 }
