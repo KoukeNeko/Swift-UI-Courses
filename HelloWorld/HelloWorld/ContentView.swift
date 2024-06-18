@@ -10,6 +10,15 @@ import AVFoundation
 
 struct ContentView: View {
     
+    
+    
+    func speak(test: String){
+        let uttrance = AVSpeechUtterance(string: test)
+        uttrance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.speech.synthesis.voice.Fred")
+        synthesizer.speak(uttrance)
+    }
+    
+    
     let synthesizer = AVSpeechSynthesizer()
     
     var body: some View {
@@ -22,11 +31,9 @@ struct ContentView: View {
                 .font(.system(.title, design: .rounded))
             VStack {
                 Button{
-                    let uttrance = AVSpeechUtterance(string: "Hello World")
-                    uttrance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.speech.synthesis.voice.Fred")
-                    synthesizer.speak(uttrance)
+                    speak(test: "Hello Wold")
                 } label: {
-                    Text("This is a button")
+                    Text("Hello Wold")
                         .fontWeight(.bold)
                         .font(.system(.title, design: .rounded))
                 }.padding()
@@ -35,9 +42,7 @@ struct ContentView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                 
                 Button{
-                    let uttrance = AVSpeechUtterance(string: "Hello Programming")
-                    uttrance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.speech.synthesis.voice.Fred")
-                    synthesizer.speak(uttrance)
+                    speak(test: "Hello Programming")
                 } label: {
                     Text("Hello Programming")
                         .fontWeight(.bold)
