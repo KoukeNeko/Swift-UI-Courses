@@ -37,16 +37,29 @@ struct ContentView: View {
             
             Spacer()
             
-            Button {
+            VStack {
+                Button {
 
-            } label: {
-                Text("Sign Up")
+                } label: {
+                    Text("Sign Up")
+                }
+                .frame(width: 200)
+                .padding()
+                .foregroundColor(.white)
+                .background(Color.indigo)
+                .cornerRadius(10)
+
+                Button {
+
+                } label: {
+                    Text("Log In")
+                }
+                .frame(width: 200)
+                .padding()
+                .foregroundColor(.white)
+                .background(Color.gray)
+                .cornerRadius(10)
             }
-            .frame(width: 200)
-            .padding()
-            .foregroundColor(.white)
-            .background(Color.indigo)
-            .cornerRadius(10)
             
         }
         .padding(.top, 38)
