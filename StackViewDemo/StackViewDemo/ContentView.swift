@@ -18,6 +18,9 @@ struct ContentView: View {
             Text("Get help from experts in 15 minutes")
             
             Image("user1")
+                .resizable()
+//                .scaledToFit()
+                .aspectRatio(contentMode: .fit)
             
             Spacer()
         }
