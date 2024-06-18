@@ -68,4 +68,6 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+                .previewDevice(PreviewDevice(rawValue: "iPhone 15 Pro"))
+                .previewDisplayName("iPhone 15 Pro")
 }
